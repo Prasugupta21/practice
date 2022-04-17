@@ -1,0 +1,60 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+
+
+
+
+
+
+bool checkPalindrome(char str[]) {
+    char c[1000000];
+	
+	int x=strlen(str);
+		int i=x-1;
+	int j=x-1;
+	
+	
+	
+
+
+	while((j>=0)&&(i>=0))
+	{
+		c[j]=str[i];
+		j--;
+		i--;
+	}
+	i=0;
+	 j=x-1;
+	
+	
+	while((i<x)&&(j>=0))
+		  {
+			  if(str[i]!=c[j])
+			  {
+				  return false;
+				  
+			
+			  }
+		  	    i++;
+		    j--;
+		  }
+		  return true;
+		
+}
+int main()
+{
+	char str[100];
+	cin>>str;
+	bool x=checkPalindrome(str);
+	if(x==1)
+	{
+		cout<<"YES";
+	}
+	else
+	{
+		cout<<"NO";
+	}
+	return 0;
+}
