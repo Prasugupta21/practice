@@ -1,0 +1,33 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v;
+    int vSize;
+    
+    cin >> vSize;
+    for (int i = 0; i < vSize; i++) {
+        int num;
+        cin >> num;
+        v.push_back(num);
+    }
+    
+    int a, b,c;
+    cin >> a;
+    int i=a-1; // here also i can do a-- write instead of writing i in below line (v.begin()+i) i can write a 
+   
+    v.erase(v.begin() + i);
+    cin >> b >> c;
+    int j=b-1,k=c-1; // here also I can do b--;and c--; instead of writing j an k  
+    v.erase(v.begin() +j, v.begin() +k);
+    
+    cout << v.size() << endl;
+   for(auto z:v)
+   {
+       cout<<z<<" ";
+   }
+    
+    return 0;
+}
